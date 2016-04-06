@@ -24,7 +24,7 @@ using(lockingFactory.ObtainLock(key))
 }
 ```
 
-The lock gets disposed automatically. You can clear all held locks by calling the ```c# lockingService.ClearAll()``` method.
+The lock gets disposed automatically. You can clear all held locks by calling the ```lockingService.ClearAll()``` method.
 
 ## Transactions
 Using this with transactions? The transaction will only complete/commit if a lock is held, the business logic executes cleanly, and the lock is released successfully. All other cases, the transaction will rollback.
