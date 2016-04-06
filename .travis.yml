@@ -1,0 +1,15 @@
+language: csharp
+solution: InMemoryLocking.sln
+
+before_install:
+ - sudo apt-get install nunit-console
+
+before_script:
+  - nuget restore InMemoryLocking.sln
+
+script:
+  # Building Project
+  - xbuild /p:Configuration=Release InMemoryLocking.sln /p:TargetFrameworkVersion="v4.5" 
+
+after_script:
+ - nunit-console InMemoryLocking.Test/bin/Release/InMemoryLocking.Test.dll
