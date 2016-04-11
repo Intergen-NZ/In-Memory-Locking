@@ -6,8 +6,8 @@
     <ProjectGuid>{ACE2FAD7-BB7E-46BD-B495-33E893EE8D82}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>InMemoryLocking.UnitTests</RootNamespace>
-    <AssemblyName>InMemoryLocking.UnitTests</AssemblyName>
+    <RootNamespace>Intergen.InMemoryLocking.UnitTests</RootNamespace>
+    <AssemblyName>Intergen.InMemoryLocking.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -65,9 +65,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\InMemoryLocking\InMemoryLocking.csproj">
+    <ProjectReference Include="..\InMemoryLocking\Intergen.InMemoryLocking.csproj">
       <Project>{BD95107F-6C8F-4FD3-873C-872DE088D6B0}</Project>
-      <Name>InMemoryLocking</Name>
+      <Name>Intergen.InMemoryLocking</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InMemoryLocking", "InMemoryLocking\InMemoryLocking.csproj", "{BD95107F-6C8F-4FD3-873C-872DE088D6B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intergen.InMemoryLocking", "InMemoryLocking\Intergen.InMemoryLocking.csproj", "{BD95107F-6C8F-4FD3-873C-872DE088D6B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InMemoryLocking.UnitTests", "InMemoryLocking.UnitTests\InMemoryLocking.UnitTests.csproj", "{ACE2FAD7-BB7E-46BD-B495-33E893EE8D82}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intergen.InMemoryLocking.UnitTests", "InMemoryLocking.UnitTests\Intergen.InMemoryLocking.UnitTests.csproj", "{ACE2FAD7-BB7E-46BD-B495-33E893EE8D82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

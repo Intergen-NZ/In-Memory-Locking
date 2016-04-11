@@ -1,4 +1,4 @@
-﻿namespace InMemoryLocking
+﻿namespace Intergen.InMemoryLocking
 {
     public interface IInMemoryLockingService
     {

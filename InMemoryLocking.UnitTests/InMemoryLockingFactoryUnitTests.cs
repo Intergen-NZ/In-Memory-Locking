@@ -2,7 +2,7 @@
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace InMemoryLocking.UnitTests
+namespace Intergen.InMemoryLocking.UnitTests
 {
     [TestFixture]
     public class InMemoryLockingFactoryUnitTests

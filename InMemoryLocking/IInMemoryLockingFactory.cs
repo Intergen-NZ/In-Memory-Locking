@@ -1,6 +1,6 @@
 using System;
 
-namespace InMemoryLocking
+namespace Intergen.InMemoryLocking
 {
     /// <summary>
     /// Responsible for retrieving a new lock on a particular GUID or unique string.
