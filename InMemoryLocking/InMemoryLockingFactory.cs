@@ -20,7 +20,17 @@ namespace InMemoryLocking
 
         public InMemoryLock ObtainLock(Guid lockKey)
         {
-            return new InMemoryLock(lockKey, _inMemoryLockingService);
+            return new InMemoryLock(CleanUpStringKey(lockKey.ToString()), _inMemoryLockingService);
+        }
+
+        public InMemoryLock ObtainLock(string lockKey)
+        {
+            return new InMemoryLock(CleanUpStringKey(lockKey), _inMemoryLockingService);
+        }
+
+        private static string CleanUpStringKey(string lockKey)
+        {
+            return lockKey.ToLower().Trim();
         }
     }
 }

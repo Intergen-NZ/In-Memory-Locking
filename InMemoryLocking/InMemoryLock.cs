@@ -7,7 +7,7 @@ namespace InMemoryLocking
         private readonly InternalInMemoryLock _internalInMemoryLock;
         private readonly IInMemoryLockingService _inMemoryLockingService;
 
-        public InMemoryLock(Guid lockKey, IInMemoryLockingService inMemoryLockingService)
+        public InMemoryLock(string lockKey, IInMemoryLockingService inMemoryLockingService)
         {
             Argument.Argument.CheckIfNull(lockKey, "lockKey");
             Argument.Argument.CheckIfNull(inMemoryLockingService, "inMemoryLockingService");

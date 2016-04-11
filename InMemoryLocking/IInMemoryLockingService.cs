@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace InMemoryLocking
+﻿namespace InMemoryLocking
 {
     public interface IInMemoryLockingService
     {
@@ -11,7 +9,7 @@ namespace InMemoryLocking
         /// <returns>True if the lock is still valid, false if invalid.</returns>
         bool CheckLock(InternalInMemoryLock internalInMemoryLock);
 
-        InternalInMemoryLock Lock(Guid lockKey);
+        InternalInMemoryLock Lock(string lockKey);
 
         void Unlock(InternalInMemoryLock internalInMemoryLock);
 

@@ -5,7 +5,7 @@ namespace InMemoryLocking
     public class InternalInMemoryLock
     {
         public Guid LockId { get; }
-        public Guid LockKey { get; private set; }
+        public string LockKey { get; private set; }
         public DateTime LockedAt { get; private set; }
 
         public InternalInMemoryLock()
@@ -13,7 +13,7 @@ namespace InMemoryLocking
             LockId = Guid.Empty;
         }
 
-        public InternalInMemoryLock(Guid lockKey, Guid lockId, DateTime lockedAt)
+        public InternalInMemoryLock(string lockKey, Guid lockId, DateTime lockedAt)
         {
             LockedAt = lockedAt;
             LockKey = lockKey;

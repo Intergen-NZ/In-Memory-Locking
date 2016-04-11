@@ -9,7 +9,7 @@ namespace InMemoryLocking
     public class InMemoryLockingService : IInMemoryLockingService
     {
         private readonly TimeSpan _lockTimeout;
-        private readonly ConcurrentDictionary<Guid, InternalInMemoryLock> _inMemoryLocks;
+        private readonly ConcurrentDictionary<string, InternalInMemoryLock> _inMemoryLocks;
 
         /// <summary>
         /// Sets up a new instance of the locking service. Typically this would be a singleton instance.
@@ -20,7 +20,7 @@ namespace InMemoryLocking
             Argument.Argument.CheckIfNull(lockTimeout, "lockTimeout");
 
             _lockTimeout = lockTimeout;
-            _inMemoryLocks = new ConcurrentDictionary<Guid, InternalInMemoryLock>();
+            _inMemoryLocks = new ConcurrentDictionary<string, InternalInMemoryLock>();
         }
 
         public bool CheckLock(InternalInMemoryLock internalInMemoryLock)
@@ -30,7 +30,7 @@ namespace InMemoryLocking
             return CheckValidInternalLock(internalInMemoryLock);
         }
 
-        public InternalInMemoryLock Lock(Guid lockKey)
+        public InternalInMemoryLock Lock(string lockKey)
         {
             Argument.Argument.CheckIfNull(lockKey, "lockKey");
 
@@ -78,7 +78,7 @@ namespace InMemoryLocking
             return savedLock.LockId == internalInMemoryLock.LockId;
         }
 
-        private InternalInMemoryLock GetLock(Guid lockKey)
+        private InternalInMemoryLock GetLock(string lockKey)
         {
             InternalInMemoryLock savedLock;
             if (!_inMemoryLocks.TryGetValue(lockKey, out savedLock))
@@ -89,7 +89,7 @@ namespace InMemoryLocking
             return savedLock;
         }
 
-        private InternalInMemoryLock AddLock(Guid lockKey)
+        private InternalInMemoryLock AddLock(string lockKey)
         {
             var internalInMemoryLock = new InternalInMemoryLock(lockKey, Guid.NewGuid(), DateTime.UtcNow);
 
@@ -101,12 +101,12 @@ namespace InMemoryLocking
             return internalInMemoryLock;
         }
 
-        private bool ContainsAnyLock(Guid lockKey)
+        private bool ContainsAnyLock(string lockKey)
         {
             return _inMemoryLocks.ContainsKey(lockKey);
         }
 
-        private void CheckAndRemoveTimedOutLock(Guid lockKey)
+        private void CheckAndRemoveTimedOutLock(string lockKey)
         {
             if (_lockTimeout == TimeSpan.Zero || !ContainsAnyLock(lockKey)) return;
 
