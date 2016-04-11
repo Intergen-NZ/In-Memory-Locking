@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InMemoryLocking
+namespace Intergen.InMemoryLocking
 {
     public class InMemoryLockingException : Exception
     {

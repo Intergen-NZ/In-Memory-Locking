@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>Integen.InMemoryLocking</id>
+        <version>1.0.2.0</version>
+        <title>In-Memory Locking</title>
+        <authors>Opender Singh</authors>
+        <owners>Intergen Ltd</owners>
+        <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+        <projectUrl>https://github.com/Intergen-NZ/In-Memory-Locking.git</projectUrl>
+        <iconUrl>https://avatars2.githubusercontent.com/u/17167744</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A thread-safe in-memory locking service that allows you to lock on a Guid or String.</description>
+        <releaseNotes></releaseNotes>
+        <copyright>Copyright 2016</copyright>
+        <tags>Locking Concurreny</tags>
+    </metadata>
+    <files>
+        <file src="InMemoryLocking/bin/Release/Intergen.InMemoryLocking.dll" target="lib/net40" />
+    </files>
+</package>

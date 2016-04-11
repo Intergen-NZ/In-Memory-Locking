@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 
-namespace InMemoryLocking
+namespace Intergen.InMemoryLocking
 {
     /// <summary>
     /// Responsible for maintaining, allocating and removing locks. 

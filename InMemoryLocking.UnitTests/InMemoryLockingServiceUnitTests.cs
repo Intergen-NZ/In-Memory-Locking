@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using NUnit.Framework;
 using FluentAssertions;
 
-namespace InMemoryLocking.UnitTests
+namespace Intergen.InMemoryLocking.UnitTests
 {
     [TestFixture]
     class InMemoryLockingServiceUnitTests
