@@ -11,7 +11,7 @@
         <iconUrl>https://avatars2.githubusercontent.com/u/17167744</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>A thread-safe in-memory locking service that allows you to lock on a Guid or String.</description>
-        <releaseNotes></releaseNotes>
+        <releaseNotes>Cleaning up codebase.</releaseNotes>
         <copyright>Copyright 2016</copyright>
         <tags>Locking Concurreny</tags>
     </metadata>
