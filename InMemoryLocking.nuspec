@@ -2,7 +2,7 @@
 <package>
     <metadata>
         <id>Integen.InMemoryLocking</id>
-        <version>1.0.0.0</version>
+        <version>1.0.1.0</version>
         <title>In-Memory Locking</title>
         <authors>Opender Singh</authors>
         <owners>Intergen Ltd</owners>
@@ -11,7 +11,7 @@
         <iconUrl>https://avatars2.githubusercontent.com/u/17167744</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>A thread-safe in-memory locking service that allows you to lock on a Guid.</description>
-        <releaseNotes>Initial Release</releaseNotes>
+        <releaseNotes>Support for locking on strings added.</releaseNotes>
         <copyright>Copyright 2016</copyright>
         <tags>Locking Concurreny</tags>
     </metadata>
