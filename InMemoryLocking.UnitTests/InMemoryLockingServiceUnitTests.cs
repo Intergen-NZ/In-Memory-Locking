@@ -19,7 +19,7 @@ namespace InMemoryLocking.UnitTests
         [Test]
         public void Lock_Successful_ReturnsInternalLock()
         {
-            var internalCustomLock = _lockingService.Lock(Guid.NewGuid());
+            var internalCustomLock = _lockingService.Lock(Guid.NewGuid().ToString());
 
             LockShouldBeValid(internalCustomLock);
         }
@@ -27,7 +27,7 @@ namespace InMemoryLocking.UnitTests
         [Test]
         public void Lock_LockExists_ThrowsCustomLockingException()
         {
-            var key = Guid.NewGuid();
+            var key = Guid.NewGuid().ToString();
             _lockingService.Lock(key);
             _lockingService.Invoking(service => service.Lock(key))
                 .ShouldThrow<InMemoryLockingException>()
@@ -37,7 +37,7 @@ namespace InMemoryLocking.UnitTests
         [Test]
         public async Task Lock_TimedOutLockExists_ThrowsCustomLockingException()
         {
-            var key = Guid.NewGuid();
+            var key = Guid.NewGuid().ToString();
             var timedOutLock = _lockingService.Lock(key);
             LockShouldBeValid(timedOutLock);
 
@@ -50,7 +50,7 @@ namespace InMemoryLocking.UnitTests
         [Test]
         public void Unlock_Successful_ReleasesLock()
         {
-            var internalCustomLock = _lockingService.Lock(Guid.NewGuid());
+            var internalCustomLock = _lockingService.Lock(Guid.NewGuid().ToString());
             LockShouldBeValid(internalCustomLock);
 
             _lockingService.Unlock(internalCustomLock);
@@ -60,7 +60,7 @@ namespace InMemoryLocking.UnitTests
         [Test]
         public void Unlock_LockDoesntExist_ThrowsCustomLockingExceptions()
         {
-            var internalCustomLock = new InternalInMemoryLock(Guid.NewGuid(), Guid.NewGuid(), DateTime.Now);
+            var internalCustomLock = new InternalInMemoryLock(Guid.NewGuid().ToString(), Guid.NewGuid(), DateTime.Now);
 
             _lockingService.Invoking(service => service.Unlock(internalCustomLock))
                 .ShouldThrow<InMemoryLockingException>()
@@ -70,7 +70,7 @@ namespace InMemoryLocking.UnitTests
         [Test]
         public async Task Unlock_TimedOutLock_ThrowsCustomLockingException()
         {
-            var lockKey = Guid.NewGuid();
+            var lockKey = Guid.NewGuid().ToString();
             var timedOutLock = _lockingService.Lock(lockKey);
             LockShouldBeValid(timedOutLock);
 
