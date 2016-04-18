@@ -1,7 +1,7 @@
 # In Memory Locking
 
 ## NuGet
-Add this into your projects from [Nuget](https://www.nuget.org/packages/Intergen.InMemoryLocking/)
+Add this library into your projects from [NuGet](https://www.nuget.org/packages/Intergen.InMemoryLocking/).
 
 ## Features
 The purpose of this is to provide a light weight, thread-safe in-memory locking solution. If a lock on an id is already held and not timed-out, trying to get a lock on that same id from another thread will throw an exception. 
@@ -42,3 +42,6 @@ using(var scope = new TransactionScope())
 	scope.Complete();
 }
 ```
+
+## Wish to contribute? 
+Feel free to fork and make pull requests :)
