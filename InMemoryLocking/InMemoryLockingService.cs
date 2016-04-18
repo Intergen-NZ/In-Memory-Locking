@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using Intergen.Common.Argument;
 
 namespace Intergen.InMemoryLocking
 {
@@ -17,7 +18,7 @@ namespace Intergen.InMemoryLocking
         /// <param name="lockTimeout">LockTimeout is used to remove a lock if it is held too long and some other process tries to access it. The timed-out lock is only flagged, and the lock removed only when another process tries to access. Set to TimeSpan.Zero to disable lock timeout (although this can give issues if unlock fails and lock is never released).</param>
         public InMemoryLockingService(TimeSpan lockTimeout)
         {
-            Argument.Argument.CheckIfNull(lockTimeout, "lockTimeout");
+            Argument.CheckIfNull(lockTimeout, "lockTimeout");
 
             _lockTimeout = lockTimeout;
             _inMemoryLocks = new ConcurrentDictionary<string, InternalInMemoryLock>();
@@ -25,14 +26,14 @@ namespace Intergen.InMemoryLocking
 
         public bool CheckLock(InternalInMemoryLock internalInMemoryLock)
         {
-            Argument.Argument.CheckIfNull(internalInMemoryLock, "internalInMemoryLock");
+            Argument.CheckIfNull(internalInMemoryLock, "internalInMemoryLock");
 
             return CheckValidInternalLock(internalInMemoryLock);
         }
 
         public InternalInMemoryLock Lock(string lockKey)
         {
-            Argument.Argument.CheckIfNull(lockKey, "lockKey");
+            Argument.CheckIfNull(lockKey, "lockKey");
 
             CheckAndRemoveTimedOutLock(lockKey);
             return AddLock(lockKey);
@@ -40,7 +41,7 @@ namespace Intergen.InMemoryLocking
 
         public void Unlock(InternalInMemoryLock internalInMemoryLock)
         {
-            Argument.Argument.CheckIfNull(internalInMemoryLock, "internalInMemoryLock");
+            Argument.CheckIfNull(internalInMemoryLock, "internalInMemoryLock");
 
             if (!CheckValidInternalLock(internalInMemoryLock))
             {

@@ -1,4 +1,5 @@
 using System;
+using Intergen.Common.Argument;
 
 namespace Intergen.InMemoryLocking
 {
@@ -13,7 +14,7 @@ namespace Intergen.InMemoryLocking
 
         public InMemoryLockingFactory(IInMemoryLockingService inMemoryLockingService)
         {
-            Argument.Argument.CheckIfNull(inMemoryLockingService, "inMemoryLockingService");
+            Argument.CheckIfNull(inMemoryLockingService, "inMemoryLockingService");
 
             _inMemoryLockingService = inMemoryLockingService;
         }
