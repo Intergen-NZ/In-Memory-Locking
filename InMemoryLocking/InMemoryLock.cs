@@ -1,4 +1,5 @@
 ﻿using System;
+using Intergen.Common.Argument;
 
 namespace Intergen.InMemoryLocking
 {
@@ -9,8 +10,8 @@ namespace Intergen.InMemoryLocking
 
         public InMemoryLock(string lockKey, IInMemoryLockingService inMemoryLockingService)
         {
-            Argument.Argument.CheckIfNull(lockKey, "lockKey");
-            Argument.Argument.CheckIfNull(inMemoryLockingService, "inMemoryLockingService");
+            Argument.CheckIfNull(lockKey, "lockKey");
+            Argument.CheckIfNull(inMemoryLockingService, "inMemoryLockingService");
 
             _inMemoryLockingService = inMemoryLockingService;
             _internalInMemoryLock = _inMemoryLockingService.Lock(lockKey);
