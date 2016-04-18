@@ -1,5 +1,5 @@
 using System;
-using Intergen.Common.Argument;
+using Intergen.Common;
 
 namespace Intergen.InMemoryLocking
 {

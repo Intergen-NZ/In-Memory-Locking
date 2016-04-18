@@ -2,7 +2,7 @@
 <package>
     <metadata>
         <id>Intergen.InMemoryLocking</id>
-        <version>1.0.0.0</version>
+        <version>1.0.0.1</version>
         <title>In-Memory Locking</title>
         <authors>Opender Singh</authors>
         <owners>Intergen Ltd</owners>
@@ -15,7 +15,7 @@
         <copyright>Copyright 2016</copyright>
         <tags>Locking Concurreny</tags>
         <dependencies>
-            <dependency id="Integen.Common.Argument" version="1.0.0.0" />
+            <dependency id="Intergen.Common.Argument" version="1.0.0.1" />
         </dependencies> 
     </metadata>
     <files>

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using Intergen.Common.Argument;
+using Intergen.Common;
 
 namespace Intergen.InMemoryLocking
 {
