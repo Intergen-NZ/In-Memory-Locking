@@ -1,5 +1,8 @@
 # In Memory Locking
 
+## NuGet
+Add this into your projects from [Nuget](https://www.nuget.org/packages/Intergen.InMemoryLocking/)
+
 ## Features
 The purpose of this is to provide a light weight, thread-safe in-memory locking solution. If a lock on an id is already held and not timed-out, trying to get a lock on that same id from another thread will throw an exception. 
 
@@ -13,11 +16,11 @@ It is recomended you initialize the service as a singleton at a global level.
 ```c#
 var timeout = TimeSpan.FromSeconds(5);
 var lockingService = new InMemoryLockingService(timeout);
-var lockingFactory = new InMemoryLockingFactory(lockingService);
 ```
 
-and then use this factory with
+Then create a factor and use as below:
 ```c#
+var lockingFactory = new InMemoryLockingFactory(lockingService);
 using(lockingFactory.ObtainLock(key))
 {
 	...	

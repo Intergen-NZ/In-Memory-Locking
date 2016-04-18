@@ -38,7 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Intergen.Common.Argument, Version=1.0.0.0, Culture=neutral, PublicKeyToken=080ef6905e8e9b21, processorArchitecture=MSIL">
-      <HintPath>..\packages\Intergen.Common.Argument.1.0.0.0\lib\net40\Intergen.Common.Argument.dll</HintPath>
+      <HintPath>..\packages\Intergen.Common.Argument.1.0.0.1\lib\net40\Intergen.Common.Argument.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
