@@ -18,7 +18,7 @@ var timeout = TimeSpan.FromSeconds(5);
 var lockingService = new InMemoryLockingService(timeout);
 ```
 
-Then create a factor and use as below:
+Then create a factory and use as below:
 ```c#
 var lockingFactory = new InMemoryLockingFactory(lockingService);
 using(lockingFactory.ObtainLock(key))
